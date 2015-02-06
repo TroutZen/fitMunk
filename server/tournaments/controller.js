@@ -66,7 +66,7 @@ tournaments.create = function(req, res, next){
           User.findOne({user_id: req.body.creator}, function(err, user){
             if(user){
               user.tournamentsActive.addToSet(id);
-              tournament.participantsActive.addToSet(user._id);
+              tournament.participantsActive.addToSet(user.user_id);
               user.save();
               tournament.save();
               res.sendStatus(200);
