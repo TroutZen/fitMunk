@@ -6,6 +6,8 @@ angular.module('fm.lobby', [])
 	$scope.refresh = function(){
 		Tournament.fetch()
 		  .then(function(tournies){
+		  	// Tournaments are stored in the Tournament factory so that it can be shared across controllers
+		  	Tournament.tournaments = tournies;
 		  	$scope.tournaments = tournies;
 		  });
 	}
