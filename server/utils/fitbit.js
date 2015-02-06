@@ -35,7 +35,7 @@ module.exports = exports = {
     var DevinsUserId = '36SQBB';
     //creates the request to get activites json from fitbit
     // '/activities/steps/date/2015-02-01/2015-02-05/.json'
-    return client.requestResource('/activities/date/2015-02-04.json', 'GET', token, tokenSecret, DevinsUserId).then(function (data) {  
+    return client.requestResource('/activities/steps/date/2015-02-01/2015-02-05.json', 'GET', token, tokenSecret, DevinsUserId).then(function (data) {  
         //success handler for req, return the promise
         console.log('fitbit data', data);
         // Users.addUserStats(userID,data[0]);
