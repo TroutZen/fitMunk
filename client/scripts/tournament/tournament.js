@@ -11,7 +11,8 @@ angular.module('fm.tournament', [])
   $scope.users = [];
 
 
-  // fetch data from database
+  // Fetches Tournament From Database when it is clicked
+  // [refactor]: The Tournament data is actually already available within the lobby scope, we just need to import it into this controller
   Tournament.getOneTournament($stateParams._id).
     success(function(data, status){
       $scope.tournamentData = data;
